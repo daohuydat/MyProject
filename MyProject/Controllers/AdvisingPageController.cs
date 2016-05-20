@@ -11,7 +11,7 @@ namespace MyProject.Controllers
         // GET: AdvisingPage
         public ActionResult Index()
         {
-            return View();
+            return View(); 
         }
     }
 }
