@@ -1,8 +1,55 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trang chủ";
     Layout = "~/Shared/_layout.cshtml";
+    List<MyProjectDBContext.EF.AdvisorDomain> advisorDomains =
+        ViewBag.AdvisorDomains;
+    
 }
+<link href="~/Content/Style/Site.css" rel="stylesheet" />
+<div class="container">
 
-<h2>Index</h2>
 
+
+    <div class="row">
+        @foreach (var advisorDomain in advisorDomains)
+        {
+            <div class="col-md-3 col-xs-6">
+                <div class="advisor-type-item">
+                    <a href="/Home/ChatList/@advisorDomain.DomainID">
+                        <div class="advisor-type margin-auto">
+                            <p>@advisorDomain.DomainName</p>
+                        </div>
+                    </a>
+
+                    <div>
+                        <p class="advisor-type-title">
+                            @advisorDomain.Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="advisor-type-item">
+                <a href="#">
+                    <div class="advisor-type margin-auto">
+                        <p>Góc tâm sự</p>
+                    </div>
+                </a>
+                <div>
+                    <p class="margin-auto width-50 advisor-type-title">
+                        Nơi những câu chuyện cuộc sống, những mảnh đời được sẻ chia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-danger">Góp ý</button>
+
+
+</div>

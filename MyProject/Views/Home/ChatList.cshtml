@@ -1,0 +1,50 @@
+﻿@model MyProjectDBContext.EF.AdvisorDomain
+@{
+    ViewBag.Title = "ChatList";
+    Layout = "~/Shared/_layout.cshtml";
+    List<MyProjectDBContext.EF.Advisor> advisors =
+        ViewBag.Advisors;
+}
+<link href="~/Content/Style/Site.css" rel="stylesheet" />
+<link href="~/Content/Style/ChatList.css" rel="stylesheet" />
+<h2>ChatList</h2>
+<div class="container">
+
+
+    <div id="left-nav">
+        <span>@Model.DomainName</span>
+    </div>
+    <div id="main-list">
+        <div>
+            <p>Các chuyên gia nổi bật</p>
+
+            <button type="button" id="btn-quick-chat" class="btn btn-success">Chat nhanh</button>
+            <div style="clear:both;height:20px;"> </div>
+
+        </div>
+        <div class="row">
+            @foreach (var advisor in advisors)
+            {
+                <div class="col-md-3 col-xs-4">
+                    <div class="advisor-item">
+                        <a href="#" class="margin-auto">
+                            <img width="150" height="180" role="img" alt="Profile picture" src="~/Content/Upload/ProfileImages/@advisor.ProfileImage" />
+                        </a>
+
+                        <div>
+                            <p class="advisor-name">
+                                @advisor.FullName
+                            </p>
+                            <p class="advisor-status">Online</p>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div id="end-list">
+
+    </div>
+
+</div>

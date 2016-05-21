@@ -1,7 +1,4 @@
-﻿@{
-    Layout = null;
-}
-
+﻿
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,12 +11,38 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Layout</title>
+    <title>Title</title>
 </head>
 <body>
-    <div>
-        <div>Layout</div>
-        @RenderBody();   
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/Home/Index" class="navbar-brand">Tâm sự .vn</a>
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/Index">Trang chủ</a></li>
+                    <li><a href="Home/Index">Tâm sự .vn</a></li>
+                    <li><a href="Home/Index">Tâm sự .vn</a></li>
+                    <li><a href="Home/Index">Tâm sự .vn</a></li>
+                 </ul>
+                
+            </div>
+        </div>
     </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Tâm sự cùng người lạ</p>
+        </footer>
+    </div>
+
 </body>
 </html>

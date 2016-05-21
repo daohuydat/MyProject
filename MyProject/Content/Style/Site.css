@@ -1,0 +1,51 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*start Home Page*/
+.advisor-type {
+    width: 200px;
+    background-color: azure;
+    border-radius: 50%;
+}
+.advisor-type p {
+    padding: 50px 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.advisor-type-item {
+    margin-bottom:30px;
+}
+.advisor-type-item p.advisor-type-title {
+    padding: 10px;
+}
+/*end Home Page*/
